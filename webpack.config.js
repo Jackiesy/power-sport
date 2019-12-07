@@ -8,6 +8,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader','css-loader'
+        ],
+      }
+    ]
+  },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true

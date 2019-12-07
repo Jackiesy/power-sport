@@ -1,1 +1,3 @@
-document.body.innerHTML = 1010101010
+import "./index.css"
+
+document.body.innerHTML = `<div>12312312</div>`;
