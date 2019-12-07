@@ -1,0 +1,1 @@
+document.body.innerHTML = 1010101010

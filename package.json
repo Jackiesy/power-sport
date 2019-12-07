@@ -1,12 +1,19 @@
 {
   "name": "power-sport",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:Jackiesy/power-sport.git",
   "author": "hsy <493891719@qq.com>",
-  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
   "dependencies": {
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0"
   }
 }
