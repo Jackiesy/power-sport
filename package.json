@@ -1,0 +1,8 @@
+{
+  "name": "power-sport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jackiesy/power-sport.git",
+  "author": "hsy <493891719@qq.com>",
+  "license": "MIT"
+}
