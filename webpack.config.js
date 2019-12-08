@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devMode = process.env.NODE_ENV === 'production';
 
@@ -11,7 +12,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
-  plugins:[],
+  plugins:[
+    new HtmlWebpackPlugin({
+      title: "power-sport",
+      meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"}
+    })
+  ],
   module: {
     rules: [
       {
