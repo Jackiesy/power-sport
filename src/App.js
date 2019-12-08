@@ -1,25 +1,23 @@
 import React from "react"
-import { Layout,ConfigProvider } from "antd"
-import { withTranslation } from 'react-i18next';
+import { ConfigProvider } from "antd"
 import zhCN from 'antd/es/locale/zh_CN';
+import { HashRouter } from "react-router-dom";
+import { Route, Switch,Redirect } from 'react-router';
+import Home from "./pages/Home";
 import "./App.scss"
 import './static/tran'
 
-const { Sider,Content,Header } = Layout;
-
-const App = ({t}) => {
-
+const App = () => {
   return (
     <ConfigProvider locale={zhCN}>
-      <Layout className={'app'}>
-        <Header></Header>
-        <Layout>
-          <Sider>123</Sider>
-          <Content>{t("欢迎来到react")}</Content>
-        </Layout>
-      </Layout>
+      <HashRouter>
+        <Switch>
+          <Route path="/" exact={true} render={() => <Redirect to="/cn" />} />
+          <Route exact={true} path="/cn" component={Home} />
+        </Switch>
+      </HashRouter>
     </ConfigProvider>
   )
 };
 
-export default withTranslation()(App)
+export default App
