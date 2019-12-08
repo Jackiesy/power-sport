@@ -37,12 +37,17 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: [["import", {
+              "libraryName": "antd",
+              "libraryDirectory": "es",
+              "style": "css"
+            }]],
           }
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           devMode ? MiniCssExtractPlugin.loader : 'style-loader'
           ,'css-loader',"sass-loader"
