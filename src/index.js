@@ -1,8 +1,8 @@
-import "./index.scss"
-import img from './static/images/xxx.jpg';
+import React from "react";
+import ReactDOM from "react-dom";
 
-document.body.innerHTML = `
-   <div>
-        <img src=${img}/>
-   </div>
-`;
+const App = () => {
+  return (<div className={'app'}>123</div>)
+};
+
+ReactDOM.render(<App/>,document.getElementById("root"));

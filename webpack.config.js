@@ -12,14 +12,31 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
   plugins:[
     new HtmlWebpackPlugin({
       title: "power-sport",
-      meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"}
+      meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"},
+      inject: false,
+      template: require('html-webpack-template'),
+      lang: 'zh-cmn-Hans',
+      appMountId: "root"
     })
   ],
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
       {
         test: /\.scss$/,
         use: [
