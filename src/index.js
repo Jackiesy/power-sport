@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App"
 
-const App = () => {
-  return (<div className={'app'}>123</div>)
-};
-
-ReactDOM.render(<App/>,document.getElementById("root"));
+ReactDOM.render(
+  <App/>,
+  document.getElementById("root")
+);

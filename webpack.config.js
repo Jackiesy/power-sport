@@ -22,7 +22,11 @@ module.exports = {
       inject: false,
       template: require('html-webpack-template'),
       lang: 'zh-cmn-Hans',
-      appMountId: "root"
+      appMountId: "root",
+      links: [
+        'https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css',
+        'https://cdn.bootcss.com/normalize/8.0.1/normalize.css'
+      ]
     })
   ],
   module: {
