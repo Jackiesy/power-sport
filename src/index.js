@@ -1,3 +1,4 @@
 import "./index.scss"
+import img from './static/images/xxx.jpg';
 
-document.body.innerHTML = `<div>12312312</div>`;
+document.body.innerHTML = `<img src=${img}/>`;
