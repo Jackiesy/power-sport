@@ -1,8 +1,8 @@
 import React from "react"
 import { Layout } from "antd"
-import Header from "../components/Header/Header"
-import Sider from "../components/Sider/Sider"
-import Content from "../components/Content/Content"
+import Header from "../../components/Header/Header"
+import Sider from "../../components/Sider/Sider"
+import Content from "../../components/Content/Content"
 
 const Home = () => {
   return (

@@ -1,22 +1,21 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import en from "./en"
+import resources from "./resources"
 
-const resources = {
-  en: {
-    translation: en
-  }
-};
+
+const defaultLang = "cn";
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources,
 
-    keySeparator: false, // we do not use keys in form messages.welcome
+    lng: defaultLang,
+
+    keySeparator: false,
 
     interpolation: {
-      escapeValue: false // react already safes from xss
+      escapeValue: false
     }
   });
 

@@ -2,8 +2,9 @@ import React from "react"
 import { ConfigProvider } from "antd"
 import zhCN from 'antd/es/locale/zh_CN';
 import { HashRouter } from "react-router-dom";
-import { Route, Switch,Redirect } from 'react-router';
-import Home from "./pages/Home";
+import { Route, Switch } from 'react-router';
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login"
 import "./App.scss"
 import './static/tran'
 
@@ -12,8 +13,8 @@ const App = () => {
     <ConfigProvider locale={zhCN}>
       <HashRouter>
         <Switch>
-          <Route path="/" exact={true} render={() => <Redirect to="/cn" />} />
-          <Route exact={true} path="/cn" component={Home} />
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/login" component={Login} />
         </Switch>
       </HashRouter>
     </ConfigProvider>
