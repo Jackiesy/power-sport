@@ -9,7 +9,6 @@ const _Content = ({t}) => {
     <Content>
       {t("欢迎来到react")}
       <br/>
-      {t("黄思瑗是傻x")}
     </Content>
   )
 };
