@@ -1,30 +1,41 @@
-import React from "react"
-import { Layout,Select } from "antd"
+import React from 'react';
+import { Layout, Row, Icon, Button } from 'antd';
 import { withTranslation } from 'react-i18next';
-
+import Lang from '@/components/SelectLang';
 const { Header } = Layout;
-const { Option } = Select;
 
-
-const _Header = ({i18n}) => {
-
-  console.log(i18n.language);
-
-  const changeLang = (value) => {
-    document.querySelector('html').setAttribute('lang',value);
-    localStorage.setItem('lang',value);
-    i18n.changeLanguage(value)
-  };
-
-  return (
-    <Header>
-      <Select defaultValue={'en'} onChange={changeLang}>
-        <Option value="en">en</Option>
-        <Option value="zh-cmn-Hans">zh-cmn-Hans</Option>
-        <Option value="jp">jp</Option>
-      </Select>
-    </Header>
-  )
-};
-
-export default withTranslation()(_Header)
+export default class extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            collapsed: false
+        };
+        this.toggleCollapsed = () => {
+            this.setState({
+                collapsed: !this.state.collapsed
+            });
+        };
+    }
+    render() {
+        return (
+            <Header>
+                <Row type="flex" align="middle" justify="space-between">
+                    <Button
+                        type="primary"
+                        onClick={this.toggleCollapsed}
+                        style={{ marginBottom: 16 }}
+                    >
+                        <Icon
+                            type={
+                                this.state.collapsed
+                                    ? 'menu-unfold'
+                                    : 'menu-fold'
+                            }
+                        />
+                    </Button>
+                    <Lang style={{ color: '#fff' }} />
+                </Row>
+            </Header>
+        );
+    }
+}

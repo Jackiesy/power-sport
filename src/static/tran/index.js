@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import resources from "./resources"
 
 
-const defaultLang = "cn";
+const defaultLang = "zh";
 
 i18n
   .use(initReactI18next)

@@ -13,7 +13,10 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      '@': path.join(__dirname, 'src')
+    }
   },
   plugins:[
     new HtmlWebpackPlugin({
