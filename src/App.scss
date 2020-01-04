@@ -1,13 +1,10 @@
 @import '~antd/dist/antd.css';
 
 body,html {
-  min-height: 100%;
+  font-size: 16px;
+}
+#root{
+  height: 100%;
+  width: 100%;
 }
 
-#root {
-  min-height: 100%;
-}
-
-.app {
-  min-height: 100vh;
-}

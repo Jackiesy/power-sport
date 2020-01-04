@@ -18,7 +18,12 @@ module.exports = {
   plugins:[
     new HtmlWebpackPlugin({
       title: "power-sport",
-      meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"},
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+        }
+      ],
       inject: false,
       template: require('html-webpack-template'),
       lang: 'zh-cmn-Hans',
@@ -37,7 +42,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env',"@babel/plugin-proposal-class-properties"],
             plugins: [["import", {
               "libraryName": "antd",
               "libraryDirectory": "es",
