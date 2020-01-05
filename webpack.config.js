@@ -42,7 +42,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env',"@babel/plugin-proposal-class-properties"],
+            presets: ['@babel/preset-env'],
             plugins: [["import", {
               "libraryName": "antd",
               "libraryDirectory": "es",
