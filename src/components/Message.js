@@ -1,0 +1,1 @@
+import { message } from 'antd'message.config({  duration: 2,  maxCount: 3,});//type MesType = "success" | "error" | "info" | "warning" | "warn" | "loading"const mes = ({type,content}) => message[type](content)export default mes;

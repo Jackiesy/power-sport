@@ -1,0 +1,103 @@
+.login_page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: cornflowerblue;
+    background-size: 100% 100%;
+    .login_flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+      .login_left {
+        zoom: 0.9;
+      }
+      .from {
+        text-align: center;
+      }
+    }
+  
+    .login_form {
+      width: 32.166rem;
+      margin: 0 16.66rem;
+      background: #ffffff;
+      .smsCode {
+        display: flex;
+        margin-top: 2rem;
+        padding-left: 1.9rem;
+      }
+      .userimg {
+        padding: 3.166rem 0 5.5rem 0;
+        font-size: 2rem;
+        text-align: center;
+        span {
+          color: #166ac6;
+        }
+      }
+      .title {
+        padding: 2.833rem 0;
+        font-size: 2rem;
+        text-align: center;
+        span {
+          color: #166ac6;
+        }
+      }
+      .code {
+        cursor: pointer;
+      }
+    }
+  
+    .link {
+      display: flex;
+      justify-content: flex-end;
+      margin: 1rem 0 2.5rem;
+      min-height: 3.33rem;
+      color: rgba(15, 141, 218, 1);
+    }
+    .register_link {
+      text-align: right;
+    }
+  
+    .ant-form-item {
+      margin: 0.833rem 1.833rem !important;
+    }
+    .ant-input-affix-wrapper .ant-input-prefix {
+      left: 7px !important;
+      border-right: 1px solid #0e88d6;
+      padding-right: 4px;
+      img {
+        width: 1.33rem;
+        height: 1.66rem;
+      }
+    }
+    .ant-form {
+      padding-bottom: 3.5rem !important;
+      .spin {
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid #0e88d6;
+        height: 3.2rem;
+        line-height: 2.33rem;
+        background: linear-gradient(#1a64c5, #0389cd);
+        color: #fff;
+      }
+      .spin:hover {
+        filter: brightness(0.9);
+        cursor: pointer;
+      }
+    }
+    .eye {
+      width: 1.66rem;
+      transform: scale(1.5);
+    }
+    .ant-input-affix-wrapper .ant-input:not(:first-child) {
+      padding-left: 3rem;
+    }
+    .login-form-forgot {
+      cursor: pointer;
+    }
+  }
+  
